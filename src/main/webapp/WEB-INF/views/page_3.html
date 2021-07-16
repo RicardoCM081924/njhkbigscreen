@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>起重机械智能监控系统</title>
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" href="css/view.css">
+</head>
+<body>
+<!-- wrap - begin -->
+<div class="view-wrap">
+	<!-- head -->
+	<div class="view-head">
+		<!-- head-side _left -->
+		<div class="head-side _left">
+			<ul class="head-menu">
+				<li id="menu-1" class="active">设 备<i class="layui-icon layui-icon-triangle-d"></i></li>
+				<li id="menu-2" class="li-pop">坐 标<i class="layui-icon layui-icon-triangle-d"></i></li>
+				<li id="menu-3" class="li-pop">项 目<i class="layui-icon layui-icon-triangle-d"></i></li>
+			</ul>
+		</div>
+		<!-- head-title -->
+		<div class="head-title">起重机械智能监控系统</div>
+		<!-- head-side _right -->
+		<div class="head-side _right">
+			<ul class="layui-nav">
+	  			<li class="layui-nav-item">
+					<a href="javascript:;">
+		  				<img src="img/img_ico_file.png">
+					</a>
+	  			</li>
+	  			<li class="layui-nav-item">
+					<a href="javascript:;">
+		  				<img src="img/img_ico_user.png">
+					</a>
+	  			</li>
+	  			<li class="layui-nav-item">
+					<a href="javascript:;">
+		  				<img src="img/img_ico_yq.png">
+					</a>
+	  			<li class="layui-nav-item">
+					<a href="javascript:;">
+		  				<img src="img/img_ico_help.png">
+					</a>
+	  			</li>
+				<li class="layui-nav-item item-user">
+					<a href="javascript:;">
+						<img src="img/img_uh.png" class="layui-nav-img">admin
+					</a>
+					<dl class="layui-nav-child">
+						<dd><a href="">用户信息</a></dd>
+						<dd><a href="">修改密码</a></dd>
+						<dd><a href="">退出</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- view-body -->
+	<div class="view-body">
+		<!-- side left -->
+		<div class="body-side _left">
+			<!-- 视频列表 -->
+			<div class="div-box _space-20">
+				<div class="box-head">
+					<div class="box-title">视频列表</div>
+				</div>
+				<div class="row-tab">
+					<div class="layui-inline">
+						<a href="javascript:;" class="layui-btn layui-btn-sm active">所有视频</a>
+					</div>
+					<div class="layui-inline">
+						<a href="javascript:;" class="layui-btn layui-btn-sm">收藏视频</a>
+					</div>
+					<div class="layui-inline">
+						<a href="javascript:;" class="layui-btn layui-btn-sm" id="dropdown1">收藏视频 <i class="layui-icon layui-icon-down layui-font-12"></i></a>
+					</div>
+					<div class="layui-inline">
+						<a href="javascript:;" class="layui-btn layui-btn-sm" id="dropdown2">实时视频 <i class="layui-icon layui-icon-down layui-font-12"></i></a>
+					</div>
+				</div>
+				<div class="text-title">已安装监控视频（<em>1234</em>）路</div>
+				<div class="box-body">
+					<div id="tree" class="box-tree"></div>
+				</div>
+			</div>
+		</div>
+		<!-- main -->
+		<div class="body-main">
+			<div class="div-box _space-20">
+				<div class="box-head">
+					<div class="box-title">实时视频</div>
+					<div class="box-tool">
+						<a href="javascript:;" class="layui-btn layui-btn-sm btn-dropdown" id="dropdown3">
+							<i class="layui-icon layui-icon-app"></i>
+							视图切换
+							 <i class="layui-icon layui-icon-down layui-font-12"></i>
+						</a>
+					</div>
+				</div>
+				<div class="box-body box-videos">
+					<div class="videos-play">
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+					</div>
+					<ul class="list-videos scrollbar">
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+						<li>
+							<img src="img/img_ns_video.png">
+							<p>项目一现场施工</p>
+							<i class="layui-badge-dot layui-bg-cyan"></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- view-nav -->
+	<div class="view-nav">
+		<a href="javascript:;" class="nav-title">导航</a>
+		<ul>
+			<li class="li-1 active"><a href="index.html">平台首页</a></li>
+			<li class="li-2"><a href="page_2.html">设备总览</a></li>
+			<li class="li-3"><a href="javascript:;">设备定位</a></li>
+			<li class="li-4"><a href="javascript:;">报警查询</a></li>
+			<li class="li-5"><a href="javascript:;">设备登记</a></li>
+			<li class="li-6"><a href="javascript:;">远程维护</a></li>
+			<li class="li-7"><a href="javascript:;">历史检索</a></li>
+			<li class="li-8"><a href="javascript:;">报表统计</a></li>
+			<li class="li-9"><a href="javascript:;">资产管理</a></li>
+		</ul>
+	</div>
+<!-- wrap - end -->
+</div>
+<script src="layui/layui.js"></script>
+<script src="js/echarts/echarts.min.js"></script>
+<script src="js/global.js"></script>
+<script>
+H.dropdown.render({
+	elem: '#dropdown1',
+	data: [{
+		id: 100,
+		title: 'menu item11',
+	},{
+		id: 101,
+		title: 'menu item22',
+	},{
+		id: 102,
+		title: 'menu item33',
+	}],
+	click: function(obj){
+		H.msg(obj.title)
+	}
+});
+H.dropdown.render({
+	elem: '#dropdown2',
+	data: [{
+		id: 100,
+		title: 'menu item11',
+	},{
+		id: 101,
+		title: 'menu item22',
+	},{
+		id: 102,
+		title: 'menu item33',
+	}],
+	click: function(obj){
+		H.msg(obj.title)
+	}
+});
+H.dropdown.render({
+	elem: '#dropdown3',
+	data: [{
+		id: 100,
+		title: '四视图'
+	},{
+		id: 101,
+		title: '八视频',
+	},{
+		id: 102,
+		title: '九视频',
+	}],
+	click: function(obj){
+		H.msg(obj.title)
+		if(obj.id===100){
+			$('.videos-play').removeClass('video-eight video-nine').addClass('video-four').html(`
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>`)
+		}else if(obj.id===101){
+			$('.videos-play').removeClass('video-four video-nine').addClass('video-eight').html(`<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>`)
+		}else if(obj.id===102){
+			$('.videos-play').removeClass('video-four video-eight').addClass('video-nine').html(`<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>
+						<div class="video">
+							<img style="width:100%;height:100%;" src="img/img_video.png">
+							<p><i class="layui-badge-dot layui-bg-cyan"></i>
+							施工现场在线（2121）</p>
+						</div>`)
+		}
+	}
+});
+
+H.tree.render({
+	elem: '#tree',
+	showLine: false,
+	onlyIconControl: false,
+	data: [{
+			id: '100',
+			title: '架桥机',
+			children: [{
+				id: '101',
+				title: '1000T流动式架桥机',
+				children: [{
+					title: '1011'
+				}]
+			},
+			{id: '102', title: '施工现场在线01'},
+			{id: '103', title: '施工现场在线02'},
+		]},
+		{id: '200', title: '龙门吊', children: [
+			{id: '201', title: '施工现场在线01'},
+			{id: '202', title: '施工现场在线01'},
+			{id: '203', title: '施工现场在线01'},
+		]},
+		{id: '300', title: '流动式起重机', children: [] },
+		{id: '400', title: '桥面吊', children: []},
+		{id: '500', title: '吊塔', children: [] },
+		{id: '600', title: '其他', children: [] }
+	],
+	click: function(obj){
+		H.msg(obj.data.title)
+		// console.log(obj)
+		obj.elem.parents('.layui-tree').find('.active').removeClass('active');
+		if(obj.state=='open'){
+			obj.elem.children('.layui-tree-entry').addClass('active')
+		}
+	}
+})
+H.form.on('select(select_r1)',function(d){
+	H.msg(d.value)
+})
+</script>
+</body>
+</html>

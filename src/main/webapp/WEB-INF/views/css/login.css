@@ -1,0 +1,155 @@
+/* CSS Document By_hanwenyi@qq.com_210706 */
+/**
+ * @ProjectName: 起重机智能监控云服务;
+ * @FileName: 	 login.css;
+ * @Author: 	 hanwenyi@qq.com;
+ * @Date: 		 2021-07-06;
+ */
+html{
+	position:relative;
+	height:100%;
+	min-width:1050px;
+	min-height:500px;
+	font:20px/1.5 'Microsoft YaHei';
+	background:#09132a no-repeat url(login/bg.png);
+	background-size:cover;
+	user-select:none;
+}
+body{
+	color:#fff;
+	font-size:1em;
+}
+/* .login-wrap */
+.login-wrap{
+	position:absolute;
+	top:50%;
+	left:0;
+	right:0;
+	width:1050px;
+	height:540px;
+	margin:-300px auto 0;
+}
+.login-logo{
+	width:855px;
+	height:195px;
+	margin:auto;
+	background:no-repeat center url(login/logo.png);
+}
+.login-main{
+	width:930px;
+	height:245px;
+	padding:138px 60px 0;
+	margin:-35px 0 0;
+	background:no-repeat center 0 url(login/bg_main2.png);
+}
+.login-main p{
+	margin:0 0 30px;
+	font-size:0;
+}
+/*.login-main p > *{
+	font-size:20px;
+}*/
+.login-main p label{
+	position:relative;
+	box-sizing:border-box;
+	display:inline-block;
+	vertical-align:middle;
+	width:240px;
+	height:50px;
+	padding:5px 20px 5px 50px;
+	line-height:40px;
+	margin-right:20px;
+	text-align:right;
+	font-size:24px;
+	background-color:rgba(100, 100, 100, .4);
+	border-radius:7px;
+	overflow:hidden;
+}
+.login-main p .layui-icon{
+	position:absolute;
+	top:13px;
+	left:15px;
+	font-size:24px;
+	line-height:1;
+}
+.login-main p input[type=text],
+.login-main p input[type=password],
+.login-main p input.layui-input{
+	display:block;
+	height:100%;
+	padding:0;
+	background-color:transparent;
+	border:0;
+	color:#fff;
+	font-size:22px;
+}
+.login-main p input[type=text]::-webkit-input-placeholder,
+.login-main p input[type=password]::-webkit-input-placeholder,
+.login-main p input.layui-input::-webkit-input-placeholder{
+	color:#fff;
+}
+.login-main p input[type=text]:::-ms-input-placeholder,
+.login-main p input[type=password]:::-ms-input-placeholder,
+.login-main p input.layui-input:::-ms-input-placeholder{
+	color:#fff;
+}
+.login-main p input[type=text]::placeholder,
+.login-main p input[type=password]::placeholder,
+.login-main p input.layui-input::placeholder{
+	color:#fff;
+}
+.login-main .login-username,
+.login-main .login-password{
+	width:270px;
+}
+.login-main .login-vercode{
+	width:180px;
+}
+.login-main label img{
+	max-width:100%;
+	max-height:100%;
+}
+.login-btn{
+	display:inline-block;
+	vertical-align:middle;
+	width:120px;
+	height:50px;
+	padding:0 15px;
+	line-height:50px;
+	text-align:center;
+	text-decoration:none;
+	font-size:26px;
+	color:#0D245F;
+	background-color:#00e1ff;
+	border-radius:7px;
+	cursor:pointer;
+}
+.login-btn:hover{
+	color:#0D245F;
+	opacity:.8;
+}
+/* checkbox */
+.layui-form-checkbox[lay-skin=primary]:hover .layui-icon{
+	/*background-color:#fff;*/
+	border-color:#00e1ff !important;
+}
+.layui-form-checkbox[lay-skin=primary] span{
+	color:#fff;
+	font-size:18px;
+}
+.layui-form-checked[lay-skin=primary] .layui-icon{
+	background-color:#00e1ff;
+	border-color:#00e1ff !important;
+	font-weight:bold;
+	font-size:16px;
+}
+.login-main > span{
+	margin-left:20px;
+}
+.text-link{
+	color:#fff;
+}
+.text-link:hover{
+	/*text-decoration:underline;*/
+	color:#00e1ff;
+}

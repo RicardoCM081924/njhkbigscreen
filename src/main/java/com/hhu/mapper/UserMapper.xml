@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.UserDao">
+
+<select id="selectUsername" parameterType="string" resultType="com.hhu.model.User">
+        SELECT *
+        FROM
+        "TAB_SYSUSER"
+        <where>
+            username = '${username}'
+        </where>
+    </select>
+    <select id="getUserInfo" resultType="com.hhu.model.User">
+        SELECT
+        username,
+        userpasswd,
+        roleid,
+        powerid,
+        tag
+        FROM
+        "TAB_SYSUSER"
+        <where>
+            username = '${username}'
+        </where>
+    </select>
+    <update id="update_password">
+        UPDATE
+        "TAB_SYSUSER"
+        <set>
+            <if test="password!=''">
+                userPasswd='${password}'
+            </if>
+        </set>
+        <where>
+            username = '${username}'
+        </where>
+    </update>
+
+
+    <select id="usersTableShow" resultType="com.hhu.model.User">
+        SELECT id,
+               username,
+               note,
+               authority
+        FROM "TAB_SYSUSER"
+        ORDER BY id
+    </select>
+
+
+
+    <select id="getRealName" resultType="java.lang.String">
+        select username
+        from "TAB_SYSUSER"
+        where username = #{loginName}
+    </select>
+
+
+    <delete id="delete_user">
+        DELETE FROM "TAB_SYSUSER"
+        <where>
+            Users.id = #{id}
+        </where>
+    </delete>
+
+    <update id="update_user">
+        UPDATE "TAB_SYSUSER"
+        <set>
+            username = #{username},
+            password = #{password},
+            note = #{note},
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <insert id="insert_user">
+        INSERT INTO "TAB_SYSUSER"(username, password, realname, note, authority)
+        VALUES (#{username}, #{password}, #{realname}, #{note}, #{authority})
+    </insert>
+
+
+
+
+</mapper>  

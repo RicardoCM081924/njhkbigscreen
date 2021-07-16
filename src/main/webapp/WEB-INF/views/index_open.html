@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>项目筛选</title>
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" href="css/view.css">
+</head>
+<body>
+<form class="layui-form">
+	<div class="layui-form-item">
+		<div class="layui-col-xs6">
+			<div class="layui-form-label">项目名称：</div>
+			<div class="layui-input-block">
+				<input class="layui-input" type="text" placeholder="请输入项目名称">
+			</div>
+		</div>
+		<div class="layui-col-xs6">
+			<div class="layui-form-label">项目日期：</div>
+			<div class="layui-input-block">
+				<input class="layui-input" type="text" placeholder="开始日期 ~ 结束日期">
+			</div>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<div class="layui-col-xs6">
+			<div class="layui-form-label">设备型号：</div>
+			<div class="layui-input-block">
+				<input class="layui-input" type="text" placeholder="请输入设备型号：">
+			</div>
+		</div>
+		<div class="layui-col-xs6">
+			<div class="layui-form-label">设备地址：</div>
+			<div class="layui-input-block">
+				<input class="layui-input" type="text" placeholder="请输入设备地址">
+			</div>
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-space20">
+		<div class="layui-col-xs4">
+			<div class="layui-form-label">项目区划：</div>
+			<div class="layui-input-block">
+				<select>
+					<option value="0">全部设备</option>
+				</select>
+			</div>
+		</div>
+		<div class="layui-col-xs4">
+			<select>
+				<option value="0">全部类型工程</option>
+			</select>
+		</div>
+		<div class="layui-col-xs4">
+			<select>
+				<option value="0">管理权限</option>
+			</select>
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-space20">
+		<div class="layui-col-xs4">
+			<div class="layui-form-label">标签类型：</div>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input" placeholder="请输入建设单位">
+			</div>
+		</div>
+		<div class="layui-col-xs4">
+			<input type="text" class="layui-input" placeholder="请输入监理单位">
+		</div>
+		<div class="layui-col-xs4">
+			<input type="text" class="layui-input" placeholder="请输入施工单位">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-space20">
+		<div class="layui-col-xs8">
+			<div class="layui-form-label">标签类型：</div>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-col-xs4">
+			<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-normal">查 询</a>
+			<a href="javascript:;" class="layui-btn layui-btn-sm layui-btn-primary">重 置</a>
+		</div>
+	</div>
+</form>
+<div class="open-title">查询到相关结果共<em>1</em>条</div>
+<div class="list-ul">
+	<ul class="scrollbar">
+		<li><img src="img/img_list01.png"></li>
+		<li><img src="img/img_list01.png"></li>
+		<li><img src="img/img_list01.png"></li>
+		<li><img src="img/img_list01.png"></li>
+		<li><img src="img/img_list01.png"></li>
+	</ul>
+</div>
+<script src="layui/layui.js"></script>
+<script src="js/global.js"></script>
+</body>
+</html>
